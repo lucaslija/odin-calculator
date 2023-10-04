@@ -19,7 +19,7 @@ body,
 input,
 button {
   font-size: 2em;
-  font-family:'Courier New', Courier, monospace
+  font-family: "Courier New", Courier, monospace;
 }
 
 button {
@@ -53,7 +53,8 @@ button {
   justify-content: center;
 }
 
-.num-btn, .funct-btn {
+.num-btn,
+.funct-btn {
   width: 96px;
   height: 96px;
   border-radius: 50%;
@@ -63,7 +64,7 @@ button {
 
 .num-btn {
   background-color: rgb(19, 19, 19);
-  color:rgb(186, 193, 198);
+  color: rgb(186, 193, 198);
 }
 
 #functions {
@@ -90,5 +91,5 @@ button {
   border-radius: 50%;
   border: none;
   background-color: darkslategray;
-  color:rgb(186, 193, 198)
+  color: rgb(186, 193, 198);
 }
