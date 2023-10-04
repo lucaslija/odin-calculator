@@ -5,6 +5,9 @@ let operator;
 
 const display = document.querySelector("#display");
 const buttons = document.querySelector("#buttons");
+const numBtns = document.querySelector("#digits");
+const functBtns = document.querySelector("#functions");
+const equalsBtn = document.querySelector("#equals");
 
 // Operators
 function add(a, b) {
@@ -36,11 +39,21 @@ function operate(operator, a, b) {
 }
 
 // Display
-function buttonGen() {
-  for (i = 0; i < 20; i++) {
+function numBtnGen() {
+  for (i = 0; i < 10; i++) {
     let newButton = document.createElement("button");
-    buttons.appendChild(newButton);
+    newButton.className = "num-btn";
+    numBtns.appendChild(newButton);
   }
 }
 
-buttonGen();
+function functBtnGen() {
+    for (i = 0; i < 4; i++) {
+        let newButton = document.createElement("button");
+        newButton.className = "funct-btn";
+        functBtns.appendChild(newButton);
+    }
+}
+
+numBtnGen();
+functBtnGen();
