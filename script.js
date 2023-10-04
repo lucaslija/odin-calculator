@@ -50,9 +50,11 @@ function numBtnGen() {
 }
 
 function functBtnGen() {
+  let functList = ["+", "-", "x", "/"]
   for (i = 0; i < 4; i++) {
     let newButton = document.createElement("button");
     newButton.className = "funct-btn";
+    newButton.textContent = functList[i];
     functBtns.appendChild(newButton);
   }
 }
