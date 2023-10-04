@@ -50,7 +50,7 @@ function numBtnGen() {
 }
 
 function functBtnGen() {
-  let functList = ["+", "-", "x", "/"]
+  let functList = ["+", "-", "X", "/"]
   for (i = 0; i < 4; i++) {
     let newButton = document.createElement("button");
     newButton.className = "funct-btn";
