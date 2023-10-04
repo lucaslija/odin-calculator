@@ -58,21 +58,24 @@ button {
   justify-content: center;
 }
 
-.num-btn {
-  width: 33%;
-  height: 150px;
+.num-btn, .funct-btn {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 10px;
 }
 
 #functions {
   width: 30%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.funct-btn {
+/* .funct-btn {
   width: 100%;
   height: 150px;
-}
+} */
 
 #equals {
   width: 100%;
