@@ -1,5 +1,9 @@
-// Operators
+// Variables
+let firstNum;
+let secondNum;
+let operator;
 
+// Operators
 function add(a, b) {
     return a + b;
 }
