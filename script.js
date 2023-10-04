@@ -43,3 +43,5 @@ function buttonGen() {
     buttons.appendChild(newButton);
   }
 }
+
+buttonGen();
