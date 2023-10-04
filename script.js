@@ -40,9 +40,11 @@ function operate(operator, a, b) {
 
 // Display
 function numBtnGen() {
+  let digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
   for (i = 0; i < 10; i++) {
     let newButton = document.createElement("button");
     newButton.className = "num-btn";
+    newButton.textContent = digits[i];
     numBtns.appendChild(newButton);
   }
 }
