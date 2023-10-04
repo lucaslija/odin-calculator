@@ -48,11 +48,11 @@ function numBtnGen() {
 }
 
 function functBtnGen() {
-    for (i = 0; i < 4; i++) {
-        let newButton = document.createElement("button");
-        newButton.className = "funct-btn";
-        functBtns.appendChild(newButton);
-    }
+  for (i = 0; i < 4; i++) {
+    let newButton = document.createElement("button");
+    newButton.className = "funct-btn";
+    functBtns.appendChild(newButton);
+  }
 }
 
 numBtnGen();
