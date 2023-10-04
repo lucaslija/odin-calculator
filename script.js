@@ -39,7 +39,6 @@ function operate(operator, a, b) {
 function buttonGen() {
   for (i = 0; i < 20; i++) {
     let newButton = document.createElement("button");
-    newButton.className = "btn";
     buttons.appendChild(newButton);
   }
 }

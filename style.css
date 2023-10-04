@@ -21,6 +21,10 @@ body, input, button {
 
 button {
  cursor: pointer;
+ background-color:rgb(173, 173, 173);
+border: 2px solid rgb(70, 70, 70);
+width: calc(90vw / 5);
+height: calc(70vh / 4);
 }
 
 #display {
@@ -35,11 +39,4 @@ button {
     height: 70vh;
     display: flex;
     flex-wrap: wrap;
-}
-
-.btn {
-    background-color:rgb(173, 173, 173);
-    border: 2px solid rgb(70, 70, 70);
-    width: calc(90vw / 5);
-    height: calc(70vh / 4);
 }
