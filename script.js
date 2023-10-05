@@ -44,6 +44,7 @@ function numBtnGen() {
   for (i = 0; i < 10; i++) {
     let newButton = document.createElement("button");
     newButton.className = "num-btn";
+    newButton.setAttribute("id", `btn-${digits[i]}`);
     newButton.textContent = digits[i];
     numBtns.appendChild(newButton);
   }
@@ -54,6 +55,7 @@ function functBtnGen() {
   for (i = 0; i < 4; i++) {
     let newButton = document.createElement("button");
     newButton.className = "funct-btn";
+    newButton.setAttribute("id", `op-${functList[i]}`);
     newButton.textContent = functList[i];
     functBtns.appendChild(newButton);
   }
