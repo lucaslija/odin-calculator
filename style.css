@@ -84,8 +84,22 @@ button {
   height: 150px;
 } */
 
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
 #equals {
-  width: 20%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: darkslategray;
+  color: rgb(186, 193, 198);
+}
+
+#clear {
   height: 200px;
   width: 200px;
   border-radius: 50%;
