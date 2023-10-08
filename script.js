@@ -5,10 +5,12 @@ let operator = "";
 let displayValue = "";
 
 const display = document.querySelector("#display");
+const displayText = document.querySelector("#display-text");
 const buttons = document.querySelector("#buttons");
 const numBtns = document.querySelector("#digits");
 const functBtns = document.querySelector("#functions");
 const equalsBtn = document.querySelector("#equals");
+const clearBtn = document.querySelector("#clear");
 
 // Operators
 function add(a, b) {
@@ -82,3 +84,11 @@ functBtnList.forEach(button => {
     console.log(`operator is now ${operator}`);
   })
 })
+
+function clear() {
+  firstNum = "";
+  secondNum = "";
+  operator = "";
+}
+
+clearBtn.addEventListener('click', clear);
