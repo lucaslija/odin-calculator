@@ -72,15 +72,21 @@ const functBtnList = document.querySelectorAll(".funct-btn");
 
 numBtnList.forEach(button => {
     button.addEventListener('click', function() {
-      operator ? (secondNum += button.textContent) : (firstNum += button.textContent); 
-      console.log(`firstNum is now ${firstNum}`);
-      console.log(`secondNum is now ${secondNum}`);
+      if (!operator) {
+        firstNum += button.textContent;
+        displayText.textContent = firstNum;
+        console.log(`firstNum is now ${firstNum}`);
+      } else {
+        secondNum += button.textContent;
+        displayText.textContent = secondNum;
+        console.log(`secondNum is now ${secondNum}`);
+      }
     });
   });
 
 functBtnList.forEach(button => {
   button.addEventListener('click', function () {
-    firstNum == "" ? console.log("Cannot operate without a number") : operator += button.textContent;
+    firstNum == "" ? console.log("Cannot operate without a number") : operator = button.textContent;
     console.log(`operator is now ${operator}`);
   })
 })
@@ -89,6 +95,7 @@ function clear() {
   firstNum = "";
   secondNum = "";
   operator = "";
+  displayText.textContent = "";
 }
 
 clearBtn.addEventListener('click', clear);
