@@ -87,6 +87,13 @@ numBtnList.forEach(button => {
 functBtnList.forEach(button => {
   button.addEventListener('click', function () {
     firstNum == "" ? console.log("Cannot operate without a number") : operator = button.textContent;
+    if (secondNum) {
+      result = operate(operator, parseInt(firstNum), parseInt(secondNum));
+      firstNum = result;
+      console.log(`firstNum is now ${firstNum}`);
+      displayText.textContent = result;
+      secondNum = "";
+    }
     console.log(`operator is now ${operator}`);
   })
 })
