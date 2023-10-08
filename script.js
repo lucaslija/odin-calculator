@@ -26,18 +26,18 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-  return a / b;
+  return (a / b).toFixed(3);
 }
 
 function operate(operator, a, b) {
   if (operator == "+") {
-    add(a, b);
-  } else if (operator == "-") {
-    subtract(a, b);
-  } else if (operator == "*") {
-    multiply(a, b);
+    return add(a, b);
+  } else if (operator == "−") {
+    return subtract(a, b);
+  } else if (operator == "×") {
+    return multiply(a, b);
   } else {
-    divide(a, b);
+    return divide(a, b);
   }
 }
 
@@ -97,5 +97,17 @@ function clear() {
   operator = "";
   displayText.textContent = "";
 }
+
+function displayResult() {
+  if (!(firstNum)) {
+    console.log("Please enter a pair of values")
+  } else {
+    result = operate(operator, parseInt(firstNum), parseInt(secondNum));
+    console.log(result);
+    displayText.textContent = result;
+  }
+}
+
+equalsBtn.addEventListener('click', displayResult)
 
 clearBtn.addEventListener('click', clear);
