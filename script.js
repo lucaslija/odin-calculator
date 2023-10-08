@@ -90,9 +90,12 @@ numBtnList.forEach(button => {
 
 functBtnList.forEach(button => {
   button.addEventListener('click', function () {
-    firstNum == "" ? console.log("Cannot operate without a number") : operator = button.textContent;
+    if (!(operator)) {
+      operator = button.textContent;
+    }
     if (secondNum) {
       firstNum = operate(operator, parseFloat(firstNum), parseFloat(secondNum));
+      operator = button.textContent;
       console.log(`firstNum is now ${firstNum}`);
       displayText.textContent = firstNum;
       secondNum = "";
