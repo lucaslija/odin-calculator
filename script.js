@@ -1,8 +1,8 @@
 // Variables
-let firstNum;
-let secondNum;
-let operator;
-let displayValue;
+let firstNum = "";
+let secondNum = "";
+let operator = "";
+let displayValue = "";
 
 const display = document.querySelector("#display");
 const buttons = document.querySelector("#buttons");
@@ -66,10 +66,19 @@ numBtnGen();
 functBtnGen();
 
 const numBtnList = document.querySelectorAll(".num-btn");
+const functBtnList = document.querySelectorAll(".funct-btn");
 
 numBtnList.forEach(button => {
-  button.addEventListener('click', function() {
-    firstNum = parseInt(button.textContent);
-    console.log(`firstNum is now ${firstNum}`);
+    button.addEventListener('click', function() {
+      operator ? (secondNum += button.textContent) : (firstNum += button.textContent); 
+      console.log(`firstNum is now ${firstNum}`);
+      console.log(`secondNum is now ${secondNum}`);
+    });
   });
-});
+
+functBtnList.forEach(button => {
+  button.addEventListener('click', function () {
+    firstNum == "" ? console.log("Cannot operate without a number") : operator += button.textContent;
+    console.log(`operator is now ${operator}`);
+  })
+})
