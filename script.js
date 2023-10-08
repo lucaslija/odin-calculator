@@ -2,7 +2,6 @@
 let firstNum = "";
 let secondNum = "";
 let operator = "";
-let displayValue = "";
 
 const display = document.querySelector("#display");
 const displayText = document.querySelector("#display-text");
@@ -26,7 +25,12 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-  return (a / b).toFixed(3);
+  if (b == 0) {
+    displayText.textContent = "nope";
+    return "nope";
+  } else {
+    return (a / b).toFixed(3);
+  }
 }
 
 function operate(operator, a, b) {
@@ -88,10 +92,9 @@ functBtnList.forEach(button => {
   button.addEventListener('click', function () {
     firstNum == "" ? console.log("Cannot operate without a number") : operator = button.textContent;
     if (secondNum) {
-      result = operate(operator, parseInt(firstNum), parseInt(secondNum));
-      firstNum = result;
+      firstNum = operate(operator, parseFloat(firstNum), parseFloat(secondNum));
       console.log(`firstNum is now ${firstNum}`);
-      displayText.textContent = result;
+      displayText.textContent = firstNum;
       secondNum = "";
     }
     console.log(`operator is now ${operator}`);
@@ -106,12 +109,14 @@ function clear() {
 }
 
 function displayResult() {
-  if (!(firstNum)) {
+  if (!(firstNum) || !(secondNum)) {
     console.log("Please enter a pair of values")
   } else {
-    result = operate(operator, parseInt(firstNum), parseInt(secondNum));
+    result = operate(operator, parseFloat(firstNum), parseFloat(secondNum));
     console.log(result);
     displayText.textContent = result;
+    firstNum = result;
+    secondNum = "";
   }
 }
 
