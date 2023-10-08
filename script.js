@@ -2,6 +2,7 @@
 let firstNum;
 let secondNum;
 let operator;
+let displayValue;
 
 const display = document.querySelector("#display");
 const buttons = document.querySelector("#buttons");
@@ -63,3 +64,12 @@ function functBtnGen() {
 
 numBtnGen();
 functBtnGen();
+
+const numBtnList = document.querySelectorAll(".num-btn");
+
+numBtnList.forEach(button => {
+  button.addEventListener('click', function() {
+    firstNum = parseInt(button.textContent);
+    console.log(`firstNum is now ${firstNum}`);
+  });
+});
