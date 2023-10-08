@@ -35,6 +35,15 @@ button {
   margin-top: 32px;
   margin-bottom: 32px;
   border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+#display-text {
+  color:rgb(186, 193, 198);
+  font-size: 3em;
+  margin-right: 20px;
 }
 
 #buttons {
