@@ -75,23 +75,23 @@ functBtnGen();
 const numBtnList = document.querySelectorAll(".num-btn");
 const functBtnList = document.querySelectorAll(".funct-btn");
 
-numBtnList.forEach(button => {
-    button.addEventListener('click', function() {
-      if (!operator) {
-        firstNum += button.textContent;
-        displayText.textContent = firstNum;
-        console.log(`firstNum is now ${firstNum}`);
-      } else {
-        secondNum += button.textContent;
-        displayText.textContent = secondNum;
-        console.log(`secondNum is now ${secondNum}`);
-      }
-    });
+numBtnList.forEach((button) => {
+  button.addEventListener("click", function () {
+    if (!operator) {
+      firstNum += button.textContent;
+      displayText.textContent = firstNum;
+      console.log(`firstNum is now ${firstNum}`);
+    } else {
+      secondNum += button.textContent;
+      displayText.textContent = secondNum;
+      console.log(`secondNum is now ${secondNum}`);
+    }
   });
+});
 
-functBtnList.forEach(button => {
-  button.addEventListener('click', function () {
-    if (!(operator)) {
+functBtnList.forEach((button) => {
+  button.addEventListener("click", function () {
+    if (!operator) {
       operator = button.textContent;
     }
     if (secondNum) {
@@ -102,8 +102,8 @@ functBtnList.forEach(button => {
       secondNum = "";
     }
     console.log(`operator is now ${operator}`);
-  })
-})
+  });
+});
 
 function clear() {
   firstNum = "";
@@ -113,8 +113,8 @@ function clear() {
 }
 
 function displayResult() {
-  if (!(firstNum) || !(secondNum)) {
-    console.log("Please enter a pair of values")
+  if (!firstNum || !secondNum) {
+    console.log("Please enter a pair of values");
   } else {
     result = operate(operator, parseFloat(firstNum), parseFloat(secondNum));
     console.log(result);
@@ -124,6 +124,6 @@ function displayResult() {
   }
 }
 
-equalsBtn.addEventListener('click', displayResult)
+equalsBtn.addEventListener("click", displayResult);
 
-clearBtn.addEventListener('click', clear);
+clearBtn.addEventListener("click", clear);
